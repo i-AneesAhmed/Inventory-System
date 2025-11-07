@@ -146,35 +146,28 @@ Each table includes:
 ---
 
 ## ⚙️ Installation Guide
-*(You can add your own step-by-step installation process here.)*
+
+Follow these steps carefully to install and run the project:
+
+### **1️⃣ Install Python**
+- Download and install **Python 3.x** from the official site:  
+  🔗 [https://www.python.org/downloads/](https://www.python.org/downloads/)
+- During installation, **check the box** that says:  
+  ✅ *“Add Python to PATH”*
 
 ---
 
-## ▶️ Usage Instructions
-1. Launch the application.
-2. Use the **Dashboard** to navigate between modules.
-3. Add data for Employees, Suppliers, Categories, and Products.
-4. Process sales transactions in the **Sales Module**.
-5. Manage product categories via the **Category Module**.
-6. View all records and statistics in real time.
+### **2️⃣ Install MySQL**
+- Download and install **MySQL Community Server**:  
+  🔗 [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
+- Set the following credentials during setup:
+  - **Username:** `root`
+  - **Password:** `anees123` (or your own)
+- Note these credentials for later use.
 
 ---
 
-## 🚀 Future Enhancements
-- 🔐 Admin Login & Authentication
-- 🧾 PDF/Excel Report Generation
-- 📊 Sales Data Visualization (Charts)
-- ☁️ Cloud Database Integration
-- 🖨️ Invoice Printing
-- 🌐 Web Version (Flask/Django)
-
----
-
-## 👨‍💻 Author
-**Developed by:** Anees Ahmed  
-**Language:** Python (Tkinter GUI + MySQL)  
-**Purpose:** Academic Project — Inventory Management System  
-
----
-
-> 🏁 *A complete and scalable desktop-based inventory management application for business and academic use.*
+### **3️⃣ Create Database**
+Open the **MySQL Command Line** or **Workbench**, then run:
+```sql
+CREATE DATABASE inventory_system;
