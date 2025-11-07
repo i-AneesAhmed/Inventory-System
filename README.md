@@ -1,173 +1,95 @@
 # 🏪 Inventory Management System (Tkinter + MySQL)
 
-This project is a **desktop-based Inventory Management System** built using **Python (Tkinter GUI)** and **MySQL database**.  
-It provides an intuitive interface for managing employees, suppliers, product categories, product inventory, and sales operations within an organization.
+A **desktop-based Inventory Management System** built with **Python (Tkinter GUI)** and **MySQL**, designed for efficient management of employees, suppliers, products, categories, and sales operations.
 
 ---
 
 ## 📋 Table of Contents
-1. [Overview](#-overview)
-2. [Key Features](#-key-features)
-3. [Module Descriptions](#-module-descriptions)
-   - [1. Dashboard](#1-dashboard)
-   - [2. Employee Management Module](#2-employee-management-module)
-   - [3. Supplier Management Module](#3-supplier-management-module)
-   - [4. Product Management Module](#4-product-management-module)
-   - [5. Sales Management Module](#5-sales-management-module)
-   - [6. Category Management Module](#6-category-management-module)
-4. [Database Design](#-database-design)
-5. [Technology Stack](#-technology-stack)
-6. [Installation Guide](#-installation-guide)
-7. [Usage Instructions](#-usage-instructions)
-8. [Future Enhancements](#-future-enhancements)
-9. [Author](#-author)
+1. [Overview](#overview)
+2. [Key Features](#key-features)
+3. [Modules](#modules)
+4. [Database Design](#database-design)
+5. [Tech Stack](#tech-stack)
+6. [Installation Guide](#installation-guide)
+7. [Usage](#usage)
+8. [Future Enhancements](#future-enhancements)
+9. [Author](#author)
 
 ---
 
 ## 🧩 Overview
-The **Inventory Management System** is designed to efficiently handle and monitor all essential business resources — including employees, suppliers, categories, products, and sales transactions — through a centralized desktop interface.  
-It ensures streamlined business processes, accuracy, and improved decision-making through real-time data tracking.
+This system centralizes inventory management with CRUD operations for all entities — employees, suppliers, products, categories, and sales — offering an easy-to-use interface and MySQL-backed data accuracy.
 
 ---
 
 ## ✨ Key Features
-- 🎨 **User-friendly Tkinter GUI**
-- 💾 **MySQL Database Integration**
-- 👨‍💼 **Employee Record Management**
-- 🏭 **Supplier Tracking**
-- 📦 **Product and Category Management**
-- 💰 **Sales Processing and History**
-- 🔄 **CRUD Operations (Add, Update, Delete, Fetch)**
-- 📊 **Dashboard Summary and Navigation**
-- ⚙️ **Error Handling and Validation**
+- 🧭 Centralized Dashboard  
+- 👨‍💼 Employee & Supplier Management  
+- 📦 Product & Category Tracking  
+- 💰 Sales Recording & Stock Updates  
+- 🔄 Add / Update / Delete / Search  
+- 🧱 MySQL Integration with Error Handling  
 
 ---
 
-## 🧱 Module Descriptions
+## 🧱 Modules
 
-### **1. Dashboard**
-- Main control hub of the system.
-- Provides navigation to Employees, Suppliers, Categories, Products, and Sales.
-- Clean layout using Tkinter Frames.
-- Includes logout, exit, and key statistic sections.
+### 🏠 Dashboard
+Main navigation hub linking all modules — clean layout with Tkinter Frames.
 
----
+### 👨‍💼 Employee Module
+Manage employee details: ID, Name, Contact, Email, Role. Includes Add, Update, Delete, View.
 
-### **2. Employee Management Module**
-- Handles **employee record management** with Add, Update, Delete, and Fetch options.
-- Stores:
-  - Employee ID
-  - Name
-  - Contact
-  - Email
-  - Gender
-  - Role
-- Displays data using Treeview and validates all entries.
+### 🏭 Supplier Module
+Store supplier info: ID, Company, Contact, Address. Linked to product data.
 
----
+### 📦 Product Module
+Add and manage products with category, supplier, quantity, and price. Auto-stock updates on sales.
 
-### **3. Supplier Management Module**
-- Manages supplier information:
-  - Supplier ID
-  - Name
-  - Company
-  - Contact Info
-  - Address
-- Linked with product and category modules.
-- Full CRUD functionality via MySQL.
+### 💰 Sales Module
+Record product sales, quantities, total price, and date. Maintains transaction history.
 
----
-
-### **4. Product Management Module**
-- Core of the inventory system.
-- Stores:
-  - Product ID
-  - Product Name
-  - Category
-  - Supplier
-  - Quantity
-  - Price
-- Tracks stock automatically when sales occur.
-- Supports search and filtering by category or supplier.
-
----
-
-### **5. Sales Management Module**
-- Handles all **sales transactions**.
-- Tracks:
-  - Sale ID
-  - Product Sold
-  - Quantity
-  - Price
-  - Date & Time
-- Updates stock dynamically.
-- Shows sales history in a Treeview table.
-
----
-
-### **6. Category Management Module**
-- Organizes products into **categories**.
-- Allows:
-  - Add, Delete, and View Categories
-  - Manage descriptions for each
-- Uses MySQL table `category_data`.
-- Displays interactive Treeview with category records.
-- Optional category image support and modern form UI.
+### 🗂️ Category Module
+Add, delete, and view categories with descriptions. Supports images and live data view.
 
 ---
 
 ## 🗃️ Database Design
-**Database Name:** `inventory_system`
+**Database:** `inventory_system`
 
 **Tables:**
-- `employee_data`
-- `supplier_data`
-- `product_data`
-- `category_data`
-- `sales_data`
+`employee_data`, `supplier_data`, `product_data`, `category_data`, `sales_data`
 
-Each table includes:
-- Primary Key (Auto Increment)
-- Unique constraints for data integrity
-- Foreign Key relationships where necessary
+Each has:
+- Auto-increment primary key  
+- Unique constraints for integrity  
+- Relationships where necessary  
 
 ---
 
-## 💻 Technology Stack
-| Component | Technology Used |
-|------------|-----------------|
-| **Programming Language** | Python 3.x |
-| **GUI Framework** | Tkinter |
-| **Database** | MySQL |
-| **Connector** | PyMySQL |
-| **IDE (Recommended)** | VS Code / PyCharm |
-| **Supported OS** | Windows / Linux / macOS |
+## 💻 Tech Stack
+| Component | Technology |
+|------------|-------------|
+| Language | Python 3.x |
+| GUI | Tkinter |
+| Database | MySQL |
+| Connector | PyMySQL |
+| IDE | VS Code / PyCharm |
+| OS | Windows / Linux / macOS |
 
 ---
 
 ## ⚙️ Installation Guide
 
-Follow these steps carefully to install and run the project:
+1️⃣ **Install Python 3.x**  
+➡️ [https://www.python.org/downloads/](https://www.python.org/downloads/)  
+✔ Check “Add Python to PATH”
 
-### **1️⃣ Install Python**
-- Download and install **Python 3.x** from the official site:  
-  🔗 [https://www.python.org/downloads/](https://www.python.org/downloads/)
-- During installation, **check the box** that says:  
-  ✅ *“Add Python to PATH”*
+2️⃣ **Install MySQL**  
+➡️ [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)  
+Use credentials:  
+`root` / `anees123` (or your own)
 
----
-
-### **2️⃣ Install MySQL**
-- Download and install **MySQL Community Server**:  
-  🔗 [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
-- Set the following credentials during setup:
-  - **Username:** `root`
-  - **Password:** `anees123` (or your own)
-- Note these credentials for later use.
-
----
-
-### **3️⃣ Create Database**
-Open the **MySQL Command Line** or **Workbench**, then run:
+3️⃣ **Create Database**
 ```sql
 CREATE DATABASE inventory_system;
